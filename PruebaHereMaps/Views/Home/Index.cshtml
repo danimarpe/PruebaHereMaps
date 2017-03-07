@@ -1,12 +1,23 @@
 ﻿@using System.Configuration;
-@{
-    ViewBag.Title = "Index";
-}
+@using System.Web.Optimization
 
-<h2>Index</h2>
+
+@{
+    ViewBag.Title = "Here Maps - Tests";
+}
+<div id="map" style="width: 100%; height: 100%; background: grey">
+
+</div>
+
 
 <script>
-    var appIDHereMap = @ConfigurationManager.AppSettings["appIDHereMap"];
-    var appCodeHereMap = @ConfigurationManager.AppSettings["appCodeHereMap"];
+    var appIDHereMap = '@ConfigurationManager.AppSettings["appIDHereMap"]';
+    var appCodeHereMap = '@ConfigurationManager.AppSettings["appCodeHereMap"]';
 </script>
 
+<link href="~/Content/mapsjs-ui.css" rel="stylesheet" />
+<script src="~/Scripts/HereMaps/mapsjs-core.js"></script>
+<script src="~/Scripts/HereMaps/mapsjs-mapevents.js"></script>
+<script src="~/Scripts/HereMaps/mapsjs-service.js"></script>
+<script src="~/Scripts/HereMaps/mapsjs-ui.js"></script>
+<script src="~/Scripts/Map.js"></script>
