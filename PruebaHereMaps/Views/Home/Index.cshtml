@@ -1,0 +1,12 @@
+﻿@using System.Configuration;
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<script>
+    var appIDHereMap = @ConfigurationManager.AppSettings["appIDHereMap"];
+    var appCodeHereMap = @ConfigurationManager.AppSettings["appCodeHereMap"];
+</script>
+
